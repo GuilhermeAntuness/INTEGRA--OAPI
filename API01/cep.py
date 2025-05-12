@@ -8,6 +8,7 @@ def consultar_cep(cep):
 
 
     if url.status_code == 200:
+        response = url.json()
         print('Cep - ', response['cep'])
         print('Logradouro - ', response['logradouro'])
         print('Bairro - ', response['bairro'])
